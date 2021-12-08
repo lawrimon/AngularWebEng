@@ -1,0 +1,28 @@
+
+<body>
+    <div class="container mt-5 mb-5">
+
+        <div class="row" style="grid-auto-rows: 1fr;">
+            <div class="col-md" *ngFor="let fd of courseData">
+    
+                <div class="coursebox">
+                    <img src = "{{fd.courseImg}}">
+                    <h1>{{fd.courseName}}</h1>
+                    <br/>
+                    <p>{{fd.courseDetails}}</p>
+                    
+                    <p style="font-style: italic;">{{fd.courseDuration}}</p>
+                    <p>{{fd.coursePrice | currency: "£"}}</p>
+                    <br/>
+                    <a class="buybutton" [routerLink]="['/menu',fd.id]">Book Now &nbsp; <i class="bi bi-bag-check"></i> </a>
+    
+                </div>
+                
+            </div>
+           
+        </div>
+    </div>
+
+
+</body>
+   

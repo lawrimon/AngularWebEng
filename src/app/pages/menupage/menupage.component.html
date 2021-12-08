@@ -1,0 +1,35 @@
+
+    <!--Page that shows Buypage for a selected Course -->
+
+    <div class="container mt-5 mb-5">
+        
+    
+            <form>
+                <a routerLink="../../menu" class="btn btn-sm btn-dark mb-3">Go back</a>
+                <div class="Data" *ngIf="menuData">                       <!-- Booking is displayed if it was created and menuData exists-->
+                
+                
+                    <img src ="{{menuData[0].courseImg}}" widht="100%">
+                    <h1 >{{menuData[0].courseName}}</h1>        <!-- Booked Coursename is displayed-->
+                    <p>{{menuData[0].courseDetails}}</p>                       <!-- Details of the booked course-->
+                    <p> {{menuData[0].coursePrice | currency: '€'}}</p>         <!-- Price is displayed-->
+                </div>
+            
+            <h1>Enter your Credentials here </h1>
+            <div class="row-md"> <!-- Form to put Credentials in -->
+                <input type ="text" class="form-control"placeholder=" Enter First Name"/>
+                <input type ="text" class="form-control"placeholder=" Enter  Last Name"/>
+            </div>
+    
+            <input type ="text" class ="form-control" placeholder=" Enter  Email-Adress"/>
+            <textarea class="form-control" placeholder="Enter Adress"></textarea>
+            <input type ="text" class ="form-control" placeholder=" Enter  Homecountry"/>
+            
+            <a class="btn btn-md btn-light mt-3" routerLink="../../success">Place order</a>
+            
+            </form>
+
+                            
+       
+    
+    </div>

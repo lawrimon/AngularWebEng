@@ -1,0 +1,39 @@
+<body style="background-color: rgba(243, 242, 242, 0.164); overflow: hidden; padding: 20px;">
+    
+    <div class= "centered">
+        <div class = "texts">
+            <h1> Coding example for Weather API</h1>
+        <p> After coding for almost a month this is what Students <br>
+            of the "CodingwithLaurin" -Course were able to do. <br>
+            Learning from Teachers with experience helped them. <br>
+            Join us so you can join the club of exceptional Programmers.
+        </p>
+        </div>
+        <!-- Button to get Value of the Box and the Weather Data there-->
+        <button class="btn" (click)="getVal(box.value)" (click)="getWeatherData(location)" >Get Value</button> 
+        <input type = "text" class ="textinput" #box/> <!-- Textinput Box-->
+       
+         <div class="weathermain"> <!-- Weather is inside of this-->
+             
+            <div *ngIf="WeatherDatas.isDay" class="weathermainrow"> <!-- Rows with certain elements-->
+                <i class="fas fa-3x bi-sun  sun " ></i> <!-- Sun Icon -->
+            </div>
+            <div div *ngIf="!WeatherDatas.isDay" class="weathermainrow">  <!-- Moon Icon if it is not day! -->
+                <i class="fas fa-3x bi-moon moon " ></i>
+            </div>
+            <div div *ngIf="!WeatherDatas.isDay" class="weathermainrow cloudDiv "> <!-- CloudIcon -->
+                <i class="fas fa-3x bi-cloud-fill cloud " ></i>
+            </div>
+        
+            <div class="weathermainrow" style="font-size: 32px; margin-top: 5px; ">{{WeatherDatas.temp_celcius}}°</div> <!-- Weather Data Temp-->
+            <div class="weathermainrow" style="font-size: 12px;">{{WeatherDatas.temp_min}}°/{{WeatherDatas.temp_max}}°</div> <!-- Min Temp / Max Temp-->
+            <div class="weathermainrow" style="font-size: 12px;">Feels like: {{WeatherDatas.temp_feels_like}}°</div> <!-- Temperature feels like -->
+            <div class="weathermainrow" style="font-size: 25px; margin-top: 10px;">{{WeatherDatas.name}}</div> <!-- City Name-->
+            <div class="weathermainrow" style="font-size: 12px;">Humidity: {{WeatherDatas.main.humidity}}%</div> <!-- Humidity -->
+        
+        </div>
+    </div>
+   
+</body>
+
+

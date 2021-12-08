@@ -1,0 +1,56 @@
+<div class="banner"> <!--Displayed banner-->
+    <h1 class ="mb-5"> Easy Tipps & Tricks  <span style="font-weight: italic;"> to develop your Skills</span></h1>
+    <div class = "content">
+       
+        <a routerLink="menu">Book a Course! <i class="bi bi-award"></i> </a> <!--Button leading to Menu -->
+    </div>
+ </div>
+
+<div class="container mt-3 mb-5">
+    <!--Headline -->
+    <h1> How to get good <span style="font-style: italic;color: var(--primary-color)"> at Coding</span></h1>
+    <!--Step One-->
+    <div class="row">
+            <div class="col-md">
+                <div class="stepbox">
+                    <h1>1</h1>
+                    <p>Select Course</p>
+                </div>
+            
+            </div>
+     <!--Step two-->        
+            <div class="col-md">
+                <div class="stepbox">
+                <h1>2</h1>
+                <p>Book via chosen Payment</p>
+                </div>
+            </div>
+           
+     <!--Step three-->        
+            <div class="col-md">
+                <div class="stepbox">
+                <h1>3</h1>
+                <p>Take Courses and Code like Champ</p>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<!-- Courses that are available-->
+
+<div class="container">
+    <h1><span style="font-style: bold;color: black"> Available Courses </span></h1>
+    <div class="row">
+        <div class="col-md" *ngFor="let fd of courseData; index as i">
+           
+                <div class="coursebox" *ngIf="i<4"> <!-- If any more Items are added still only 4 are displayed-->              
+                    <img src ={{fd.courseImg}} />    <!-- Filling in the variables from Service -->
+                <h1>{{fd.courseName}}</h1>
+                <p>{{fd.coursePrice | currency:'€'}}</p>
+            </div>
+        </div>
+        
+    </div>
+    <a routerLink="menu" class="viewmore">View more Classes</a>
+</div>

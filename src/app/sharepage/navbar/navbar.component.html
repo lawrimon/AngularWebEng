@@ -1,0 +1,31 @@
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink ="">CodingWithLaurin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink =""  routerLinkActive = "active-link" [routerLinkActiveOptions] = "{exact:true}">Home</a> <!-- Nav Link to Home -->
+          </li> <!-- Router Link to connect to other websites-->
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "menu" routerLinkActive = "active-link" >Menu</a> <!-- Nav Link to Menu -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "about" routerLinkActive = "active-link"  >About</a>  <!-- Nav Link to About --> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "contact" routerLinkActive = "active-link" >Contact</a> <!-- Nav Link to Contact --> 
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "weatherz" routerLinkActive = "active-link" >WeatherExample</a> <!-- Nav Link to Weather --> 
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

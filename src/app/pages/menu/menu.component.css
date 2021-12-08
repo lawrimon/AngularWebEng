@@ -1,0 +1,42 @@
+@media screen and (max-width:600px){
+    .banner
+{
+  
+    height:120vh;
+ 
+}
+}
+
+.coursebox{         /* Box containing the courses */
+    padding: 10px 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+   
+}
+
+.coursebox img{     /* Image of the Courses */
+    width: 100%;
+    height:250px;
+   
+    border-radius: 10px;
+
+}
+
+.coursebox h1 {     /* Headline for the coursebox */
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+.buybutton{         /* Button leading to Singe-Course-Menu */
+
+    color: black;
+    background-color: thistle;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor:pointer; 
+
+}
+
